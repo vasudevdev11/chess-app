@@ -26,12 +26,10 @@ code {
 
 /* Responsive board size: small on mobile, large on desktop */
 .board-responsive {
-  width: 90vw;
-  height: 90vw;
+  width: min(98vw, 340px);
+  height: min(98vw, 340px);
   max-width: 340px;
   max-height: 340px;
-  min-width: 200px;
-  min-height: 200px;
 }
 @media (min-width: 1024px) {
   .board-responsive {
@@ -39,8 +37,6 @@ code {
     height: 640px;
     max-width: 640px;
     max-height: 640px;
-    min-width: 640px;
-    min-height: 640px;
   }
 }
 
