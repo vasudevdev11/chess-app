@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { Chess } from 'chess.js';
 import SquareWrapper from './SquareWrapper';
@@ -147,31 +146,29 @@ const Board = () => {
           </div>
         </div>
       )}
-      <div className="flex flex-row items-start justify-center gap-12">
+      <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-4 lg:gap-4 w-full px-2 md:px-0">
         <div
-          className="flex flex-col items-start gap-6 mt-8 p-6 rounded-2xl shadow-xl bg-white/30 backdrop-blur-md border border-white/40"
-          style={{ minWidth: 180 }}
+          className="flex flex-col items-start gap-4 mt-4 lg:mt-8 p-2 md:p-2 lg:p-4 rounded-2xl shadow-xl bg-white/30 backdrop-blur-md border border-white/40 w-full max-w-[160px] md:max-w-[180px] lg:max-w-[200px] lg:ml-16"
+          style={{ minWidth: 120 }}
         >
-          <span className="font-bold text-xl text-gray-800 drop-shadow mb-2 tracking-wide">Chess Menu</span>
-          <span className="font-semibold text-lg text-gray-700">Turn: <span className="text-blue-700">{turn}</span></span>
+          <span className="font-bold text-base md:text-lg lg:text-xl text-gray-800 drop-shadow mb-2 tracking-wide">Chess Menu</span>
+          <span className="font-semibold text-sm md:text-base lg:text-lg text-gray-700">Turn: <span className="text-blue-700">{turn}</span></span>
           <button
             onClick={handleRestart}
-            className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white px-6 py-2 rounded-xl text-base font-semibold shadow transition-all duration-200 mb-2"
+            className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white px-3 py-1 md:px-4 md:py-2 rounded-xl text-xs md:text-sm lg:text-base font-semibold shadow transition-all duration-200 mb-2"
           >
             Restart
           </button>
           <button
             onClick={handleUndo}
-            className="bg-gradient-to-r from-gray-400 to-gray-600 hover:from-gray-500 hover:to-gray-700 text-white px-6 py-2 rounded-xl text-base font-semibold shadow transition-all duration-200"
+            className="bg-gradient-to-r from-gray-400 to-gray-600 hover:from-gray-500 hover:to-gray-700 text-white px-3 py-1 md:px-4 md:py-2 rounded-xl text-xs md:text-sm lg:text-base font-semibold shadow transition-all duration-200"
           >
             Undo
           </button>
         </div>
         <div
-          className="rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-700 bg-gradient-to-br from-green-200 to-green-500"
+          className="rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-700 bg-gradient-to-br from-green-200 to-green-500 mx-auto board-responsive"
           style={{
-            width: 640,
-            height: 640,
             display: 'grid',
             gridTemplateColumns: 'repeat(8, 1fr)',
             gridTemplateRows: 'repeat(8, 1fr)',

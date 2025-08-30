@@ -1,10 +1,10 @@
 html, body {
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   background: none !important;
   border: none !important;
   margin: 0 !important;
   padding: 0 !important;
+  overflow-x: hidden;
 }
 @tailwind base;
 @tailwind components;
@@ -22,4 +22,55 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Responsive board size: small on mobile, large on desktop */
+.board-responsive {
+  width: 90vw;
+  height: 90vw;
+  max-width: 340px;
+  max-height: 340px;
+  min-width: 200px;
+  min-height: 200px;
+}
+@media (min-width: 1024px) {
+  .board-responsive {
+    width: 640px;
+    height: 640px;
+    max-width: 640px;
+    max-height: 640px;
+    min-width: 640px;
+    min-height: 640px;
+  }
+}
+
+/* Responsive square size: small on mobile, large on desktop */
+.square-responsive {
+  max-width: 44px;
+  max-height: 44px;
+  min-width: 18px;
+  min-height: 18px;
+}
+@media (min-width: 1024px) {
+  .square-responsive {
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+  }
+}
+
+/* Responsive font size for chess pieces: small on mobile/medium, large on desktop */
+.piece-responsive {
+  font-size: 28px;
+}
+@media (min-width: 768px) {
+  .piece-responsive {
+    font-size: 38px;
+  }
+}
+@media (min-width: 1024px) {
+  .piece-responsive {
+    font-size: 60px;
+  }
 }

@@ -18,8 +18,13 @@ const SquareWrapper = ({
 
   return (
     <div
-      className={`flex items-center justify-center ${bg} border border-gray-400 cursor-pointer`}
-      style={{ width: 80, height: 80, boxSizing: 'border-box' }}
+      className={`flex items-center justify-center ${bg} border border-gray-400 cursor-pointer square-responsive`}
+      style={{
+        width: '100%',
+        height: '100%',
+        aspectRatio: '1/1',
+        boxSizing: 'border-box',
+      }}
       onClick={onClick}
       data-square={position}
     >

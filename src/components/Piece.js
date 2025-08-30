@@ -15,8 +15,8 @@ const Piece = ({ piece: { type, color } }) => {
 
   return (
     <div
+      className="piece-responsive"
       style={{
-        fontSize: 60,
         fontWeight: 'bold',
         color: color === 'w' ? 'white' : 'black',
         cursor: 'pointer',
